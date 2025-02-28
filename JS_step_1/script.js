@@ -1,29 +1,29 @@
-/* Задание на урок:
+/* Lesson Assignment:
 
-1) Создать переменную numberOfFilms и в неё поместить ответ от пользователя на вопрос:
-'Сколько фильмов вы уже посмотрели?'
+1) Create a variable numberOfFilms and put the answer from the user to the question:
+'How many films have you watched so far?
 
-2) Создать объект personalMovieDB и в него поместить такие свойства:
-    - count - сюда передается ответ на первый вопрос
-    - movies - в это свойство поместить пустой объект
-    - actors - тоже поместить пустой объект
-    - genres - сюда поместить пустой массив
-    - privat - в это свойство поместить boolean(логическое) значение false
+2) Create a personalMovieDB object and put the following properties into it:
+    - count - the answer to the first question is passed here
+    - movies - put an empty object in this property
+    - actors - also place an empty object
+    - genres - place an empty array here
+    - privat - put boolean (logical) value false in this property.
 
-3) Задайте пользователю по два раза вопросы:
-    - 'Один из последних просмотренных фильмов?'
-    - 'На сколько оцените его?'
-Ответы стоит поместить в отдельные переменные
-Записать ответы в объект movies в формате:
+3) Ask the user two questions each:
+    - ‘One of the most recently watched films?’
+    - ‘How much would you rate it?’
+The answers should be placed in separate variables
+Write the answers to the movies object in the format:
     movies: {
-        'logan': '8.1'
+        ‘logan’: ‘8.1’
     }
 
-Проверить, чтобы все работало без ошибок в консоли */
+Check that everything works without errors in the console */
 
 'use strict';
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+const numberOfFilms = +prompt('How many films have you seen so far?', '');
 
 console.log(`numberOfFilms: ${numberOfFilms}`);
 
@@ -38,12 +38,12 @@ const personalMovieDB = {
 console.log(personalMovieDB);
 console.log(`personalMovieDB: ${JSON.stringify(personalMovieDB, null, 4)}`);
 
-let lastWatchedFilm = prompt('Один из последних просмотренных фильмов?', '');
-let rating = +prompt('На сколько оцените его?', '');
+let lastWatchedFilm = prompt('One of the last films you saw?', '');
+let rating = +prompt('How much would you rate it?', '');
 personalMovieDB.movies[lastWatchedFilm] = rating;
 
-lastWatchedFilm = prompt('Один из последних просмотренных фильмов?', '');
-rating = +prompt('На сколько оцените его?', '');
+lastWatchedFilm = prompt('One of the last films you saw?', '');
+rating = +prompt('How much would you rate it?', '');
 personalMovieDB.movies[lastWatchedFilm] = rating;
 
 console.log(personalMovieDB);
